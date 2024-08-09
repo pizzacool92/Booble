@@ -67,7 +67,8 @@
     <script>
         function searchBooble() {
             const query = document.getElementById('search-input').value;
-            window.location.href = `${window.location.origin}/search.html?q=${encodeURIComponent(query)}`;
+            const baseUrl = window.location.origin + window.location.pathname.replace(/\/$/, '');
+            window.location.href = `${baseUrl}/search.html?q=${encodeURIComponent(query)}`;
         }
 
         function feelingLucky() {
